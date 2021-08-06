@@ -364,6 +364,9 @@ a:hover {
   #gmailValue {
     font-size: 0.9rem !important;
   }
+   body{
+    font-size: 0.7rem !important;
+  }
 }
 
 /* mdoal-animation */
