@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./mysite.css">
+    <title>Giorgi Aladashvili</title>
+</head>
+
+<body>
+
+    <div id="headerNav" style="display: block;">
+        <div class="container-fluid p-2 bg-secondary">
+            <div class="row">
+                <div class="col-5 mt-2">
+                    <h4 id="better" class="text-white betterClass">
+                        <span>B </span>
+                        <span>e</span>
+                        <span></span>
+                        <span></span>
+                        <span> B</span>
+                        <span>e</span>
+                        <span>T</span>
+                        <span>T</span>
+                        <span>e</span>
+                        <span>r</span></h4>
+                    <div class="d-flex justify-content-start">
+                        <h4 id="everyD" class="text-white betterClass"><span>E</span>
+                            <span>v</span>
+                            <span>e</span>
+                            <span>r</span>
+                            <span> y</span>
+                            <span>D</span>
+                            <span>a</span>
+                            <span>y</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="col-7 d-flex justify-content-end">
+                    <div id="headNavCon">
+                        <div class="col-12 d-flex justify-content-end">
+                            <a class="nav-link active border border-white text-info d-flex justify-content-end"
+                                id="homeBtn" aria-current="page" href="#">Home</a>
+                            <a class="nav-link text-white" id="myWorkBtn" href="#">My Work</a>
+                            <!-- Button trigger modal -->
+                            <a type="button" class="nav-link text-white" data-bs-toggle="modal"
+                                data-bs-target="#exampleModalCenter" id="contactBtn">
+                                Contact
+                            </a>
+                        </div>
+                    </div>
+                    <i class="fa fa-bars d-none" id="sideIcon" style="font-size: 45px; color: white;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--sideBar-->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#" class="mt-3" id="navHomeBtn">Home</a>
+        <a href="#" class="mt-3" id="navWorkBtn">My work</a>
+        <a class="text-white mt-3" id="navContcBtn" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+            Contact
+        </a>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="modal fade modalanime" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content bg-primary">
+                <div class="modal-header">
+                    <div class="col-12 d-flex justify-content-center">
+                        <h5 class="modal-title text-white" id="exampleModalCenterTitle"
+                            style="letter-spacing: 2px; font-size: 1.5rem;">Contact</h5>
+                    </div>
+                </div>
+                <div class="modal-body d-flex justify-content-center bg-secondary">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4 d-flex justify-content-end"> <a
+                                    href="https://www.facebook.com/gio.aladashvili.5/" target="_blank"> <img
+                                        src="./facebook.jpg" class="img-fluid roundImg" alt="facebook"></a></div>
+                            <div class="col-4 d-flex justify-content-center"> <a href="https://www.viber.com/en/"
+                                    target="_blank"> <img src="./viber.jpg" class="img-fluid roundImg" alt="viber"></a>
+                            </div>
+                            <div class="col-4 d-flex justify-content-start">
+
+                                <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank"> <img
+                                        src="./images/logo.png" class="img-fluid roundImg" alt="gmail"
+                                        data-bs-toggle="modal" id="giomodal" data-bs-target="#gmailModal"></a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-primary text-white mt-2 d-flex justify-content-center">
+                    <button type="button" class="btn text-white" data-bs-dismiss="modal"
+                        style="width: 350px; font-size: 1.2rem !important; letter-spacing: 2px;">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Gmail-modal -->
+    <div class="modal fade" id="gmailModal" tabindex="-1" role="dialog" aria-labelledby="gmailModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body d-flex justify-content-center bg-primary">
+                    <input type="text" value="crazyonesteam@gmail.com" class="shadow p-3 mb-0 bg-white rounded"
+                        id="gmailValue" style="width: 300px; border: hidden; font-size: 1.3rem !important;">
+                </div>
+                <div class="modal-footer d-flex justify-content-center bg-secondary">
+                    <button type="button" id="copyClip" class="btn btn-primary" data-bs-dismiss="modal"
+                        style="letter-spacing: 2px; font-style: italic;">Copy
+                        to
+                        clipboard</button> </div>
+            </div>
+        </div>
+    </div>
+    <div id="main" style="display: block">
+        <div class="card text-center">
+            <div class="card-header text-white bg-primary mb-1">
+                <strong>
+                    <h3 class="card-title " style="letter-spacing: 3px;">GIORGI ALADASHVILI</h3>
+                </strong>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4">
+                            <div class="flip-card  ps-3">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="./gio.jpg" alt="Gio" class="img-fluid" style="height: 300px;">
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h1>FRONTEND</h1>
+                                        <p>HTML</p>
+                                        <p>CSS</p>
+                                        <p>JAVASCRIPT</p>
+                                        <p>BOOTSTRAP</p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <ul class="pe-2" style="font-size: 1.2rem; ">
+                                <dl class="row mt-3 ">
+                                    <dt>Born</dt>
+                                    <dd class="badge bg-secondary" style="font-size: 1.0rem;">
+                                        <p>1995 1 july in Georgia, Tbilisi </p>
+                                    </dd>
+                                    <dt>Graduate</dt>
+                                    <dd class="badge bg-secondary mt-1">
+                                        <a href="https://iliauni.edu.ge/ge/" target="_blank"
+                                            style="text-decoration: underline; color: white; cursor: pointer;letter-spacing: 2px;font-size: 1.0rem;">
+                                            Ilia State
+                                            University</a>
+                                    </dd>
+                                    <dt>Nationality</dt>
+                                    <dd class="badge bg-secondary mt-1 ">
+                                        <div class="contaienr">
+                                            <div class="row">
+                                                <div class="col-6"
+                                                    style="font-size: 1.0rem; margin-top: 5px !important; letter-spacing: px;">
+                                                    Georgian
+                                                </div>
+                                                <div class="col-6">
+                                                    <img src="./georgianFlag.png" class="img-fluid rounded align-top"
+                                                        alt="georgianFlag" style="height: 28px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                    <dt>knowledge</dt>
+                                    <dd class="badge bg-primary mt-1 d-flex justify-content-center"
+                                        style="letter-spacing: 2px;">
+                                        <div class="contaienr">
+                                            <div class="row">
+                                                <div class="col-12" style="font-size: 1.3rem;">
+                                                    <span class="badge bg-secondary">Html,</span>
+                                                    <span class="badge bg-secondary">Css,</span>
+                                                    <span class="badge bg-secondary">Javascript,</span>
+
+                                                </div>
+                                                <div class="col-12 mt-2" style="font-size: 1.3rem;">
+                                                    <span class="badge bg-secondary">Bootstrap,</span>
+                                                    <span class="badge bg-secondary">cordova</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </ul>
+                        </div>
+                        <div class="col-sm-12 col-md-8">
+                            <ul class="liC ">
+                                <h3 class="card-titlec mb-2 myTitle text-info" id="about">About Me</h3>
+                                <li class="shadow p-2 mb-3 bg-white rounded">
+                                    I was born on July 1, 1995 in Tbilisi Georgia,
+                                    Graduated from 146 public school.
+                                </li>
+                                <li class="shadow p-2 mb-3 bg-white rounded">Passed the bachelor's exams and graduated
+                                    Faculty of Business Administration
+                                    from
+                                    <strong> <a href="https://iliauni.edu.ge/ge/" class="text-success"
+                                            target="_blank">Ilia
+                                            State University</a></strong> 2013-2018,</li>
+                                <li class="shadow p-2 mb-3 bg-white rounded">In 2018, I passed both the master's
+                                    and
+                                    bachelor's exams again, got the master documents from <strong> <a
+                                            href="https://iliauni.edu.ge/ge/ " class="text-success" target="_blank">Ilia
+                                            State University</a></strong> <span class="bg-secondary text-white"
+                                        style="letter-spacing: 1px;"> Faculty of Business Administration</span>
+                                    and continued my studies
+                                    at the
+                                    bachelor's degree at the <strong><a href="https://gtu.ge/" class="text-success"
+                                            target="_blank">Technical
+                                            University</a></strong>, <span class="bg-secondary text-white"
+                                        style="letter-spacing: 1px; ">Faculty of
+                                        Electrical Engineering and Electronics. </span></li>
+                                <li class="shadow p-2 mb-3 bg-white rounded">
+                                    In 2019, I passed the master's exams at the <span class="bg-secondary text-white"
+                                        style="letter-spacing: 1px;">Faculty of Programming of the</span>
+                                    <strong>Technical
+                                        University</strong>, but not graduated, I am self-taught Web developer.
+                                </li>
+                                <h3 class="card-title myTitle text-info" id="about">Work Experience</h3>
+                                <li class="shadow p-2 mb-3 bg-white rounded">In 2017-2018, I started working in
+                                    <strong><a href="https://www.tbcbank.ge/web/ka">TBC
+                                            BANK</a></strong> as
+                                    Assistant of Cash Office Head,
+                                </li>
+                                <li class="shadow p-2 mb-3 bg-white rounded">In 2018, became a TBC Bank Cash
+                                    Office Manager.
+                                </li>
+                                <li class="shadow p-2 mb-3 bg-white rounded">In 2019 I start learning web development
+                                    myself, because I love this profession, still developing my skills to be
+                                    <strong>better</strong>.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-primary text-white">
+                    <h3 class=" card-title " style=" letter-spacing: 3px;">FRONTEND DEVELOPER</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--My Work Page-->
+    <div id="myWork" class="ps-5 pe-5 mb-2" style="display: none;">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active ">
+                    <div class="card text-center mt-2" id="card1">
+                        <div class="card-body">
+                            <p class="card-text">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="card-header text-white bg-primary">
+                                        <strong>
+                                            <h3 class="card-title " style="letter-spacing: 3px;">Circle Hell</h3>
+                                        </strong>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4">
+                                        <img class="card-img-top" src="./images/ic_launcher.png" alt="colorPanic"
+                                            style="max-height: 250px; max-width: 250px;">
+                                        <ul style="font-size: 1.2rem; border-radius: 50%;">
+                                            <dl class="row mt-3">
+                                                <dt style="letter-spacing: 2px;">Category</dt>
+                                                <dd class="bg-info mt-1 ">
+                                                    Casual
+                                                </dd>
+                                            </dl>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-12 col-md-8">
+                                        <ul class="liC ">
+                                            <h3 class="card-titlec mb-2 myTitle text-info">Android Game</h3>
+                                            <li class="shadow p-2 mb-3 bg-white rounded">
+                                                You must destroy circles from the Hell as fast as you Can</li>
+                                            <li class="shadow p-2 mb-3 bg-white rounded">You can test your reaction
+                                                skills.
+                                            </li>
+                                            <li class="shadow p-2 mb-3 bg-white rounded">Destroy as Many Balls as you
+                                                Can
+                                                for
+                                                higher score.</li>
+                                            <div class="container smallFont">
+                                                <div class="row rounded bg-info text-white"
+                                                    style="font-style: italic; letter-spacing: 1px; font-weight: bold; border: 1px solid black;">
+                                                    <h4 class="card-titlec mb-2 text-dark" style="font-weight: bolder;">
+                                                        Skills
+                                                    </h4>
+                                                    <hr style="border: 1px solid black;">
+                                                    <div class="col-6 d-flex justify-content-end">HTML</div>
+                                                    <div class="col-6 d-flex justify-content-start">CSS</div>
+                                                    <div class="col-6">Javascript</div>
+                                                    <div class="col-6">Cordova</div>
+                                                    <div class="col-12">Bootstrap</div>
+                                                </div>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                    <a href="https://play.google.com/store/apps/details?id=ca.galadashvili.circlehell"
+                                        target="_blank" class="btn btn-primary btn-lg mt-2">See on PlayStore</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card text-center mt-2" id="card2">
+                        <div class="card-body">
+                            <p class="card-text">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="card-header text-white bg-primary">
+                                        <strong>
+                                            <h3 class="card-title " style="letter-spacing: 3px;">Color Panic</h3>
+                                        </strong>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4">
+                                        <img class="card-img-top" src="./images/Color panic.png" alt="colorPanic"
+                                            style="max-height: 250px; max-width: 250px;">
+                                        <ul style="font-size: 1.2rem; border-radius: 50%;">
+                                            <dl class="row mt-3">
+                                                <dt style="letter-spacing: 2px;">Category</dt>
+                                                <dd class="bg-info mt-1 ">
+                                                    Casual
+                                                </dd>
+                                            </dl>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-12 col-md-8">
+                                        <ul class="liC ">
+                                            <h3 class="card-titlec mb-2 myTitle text-info">Android Game</h3>
+                                            <li class="shadow p-2 mb-3 bg-white rounded">
+                                                Test your reaction</li>
+                                            <li class="shadow p-2 mb-3 bg-white rounded">You must match the same colors.
+                                            </li>
+                                            <li class="shadow p-2 mb-3 bg-white rounded">Level Up, Time Limit</li>
+                                            <div class="container smallFont">
+                                                <div class="row rounded bg-info text-white"
+                                                    style="font-style: italic; letter-spacing: 1px; font-weight: bold; border: 1px solid black;">
+                                                    <h4 class="card-titlec mb-2 text-dark" style="font-weight: bolder;">
+                                                        Skills
+                                                    </h4>
+                                                    <hr style="border: 1px solid black;">
+                                                    <div class="col-6 d-flex justify-content-end">HTML</div>
+                                                    <div class="col-6 d-flex justify-content-start">CSS</div>
+                                                    <div class="col-6">Javascript</div>
+                                                    <div class="col-6">Cordova</div>
+                                                    <div class="col-12">Bootstrap</div>
+                                                </div>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                    <a href="https://play.google.com/store/apps/details?id=ca.crazyones.colorpanic"
+                                        target="_blank" class="btn btn-primary btn-lg mt-2">See on PlayStore</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card text-center mt-2" id="card3">
+                        <div class="card-body">
+                            <p class="card-text">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="card-header text-white bg-primary">
+                                        <strong>
+                                            <h3 class="card-title " style="letter-spacing: 3px;">Imereti</h3>
+                                        </strong>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4">
+                                        <img class="card-img-top" src="./images/imereti.png" alt="Imeretipage"
+                                            style="max-height: 250px; max-width: 250px;">
+                                        <ul style="font-size: 1.2rem; border-radius: 50%;">
+                                            <dl class="row mt-3">
+                                                <dd class="bg-info mt-1 ">
+                                                    Region of Georgia
+                                                </dd>
+                                                <dd class="bg-warning mt-1 text-dark">
+                                                    Not fully complite
+                                                </dd>
+                                                <dd class="mt-1 ">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-striped bg-warning"
+                                                            role="progressbar" style="width: 45%" aria-valuenow="45"
+                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </dd>
+
+
+                                            </dl>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-12 col-md-8">
+                                        <ul class="liC ">
+                                            <h3 class="card-titlec mb-2 myTitle text-info">Website</h3>
+                                            <li class="shadow p-2 mb-3 bg-white rounded">
+                                                This is a Website one region of my country Imereti.
+                                            </li>
+                                            <li class="shadow p-2 mb-3 bg-white rounded">Its all about: history,
+                                                culture, Sights,</li>
+                                            <li class="shadow p-2 mb-3 bg-white rounded">Written in Gorgian</li>
+                                            <div class="container smallFont">
+                                                <div class="row rounded bg-info text-white"
+                                                    style="font-style: italic; letter-spacing: 1px; font-weight: bold; border: 1px solid black;">
+                                                    <h4 class="card-titlec mb-2 text-dark" style="font-weight: bolder;">
+                                                        Skills
+                                                    </h4>
+                                                    <hr style="border: 1px solid black;">
+                                                    <div class="col-6 d-flex justify-content-end">HTML</div>
+                                                    <div class="col-6 d-flex justify-content-start">CSS</div>
+                                                    <div class="col-6">Javascript</div>
+                                                    <div class="col-6">Cordova</div>
+                                                    <div class="col-12">Bootstrap</div>
+                                                </div>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                    <a href="#" class="btn btn-primary btn-lg mt-2">Imereti Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+                <!--ჩემი დამატებული ეს შესასწორებელია
+                <i class="fa fa-angle-double-left" id="leftArrow"
+                    style="font-size: 3rem; color: black; cursor: pointer;"></i>
+                <span class="visually-hidden">Previous</span> -->
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <!--ჩემი დამატებული
+                <i class="fa fa-angle-double-right" id="leftArrow"
+                    style="font-size: 3rem; color: black; cursor: pointer;"></i>-->
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!--აქედა-->
+
+
+
+    <!--აქამდე-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js "
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4 "
+        crossorigin="anonymous "></script>
+
+    <script src="./mysite.js"></script>
+</body>

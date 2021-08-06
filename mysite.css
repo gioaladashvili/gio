@@ -1,0 +1,382 @@
+body {
+  background: rgb(62, 157, 251);
+  background: linear-gradient(
+    90deg,
+    rgba(62, 157, 251, 1) 8%,
+    rgba(13, 98, 182, 1) 25%,
+    rgba(158, 149, 149, 1) 49%,
+    rgba(110, 106, 106, 1) 74%
+  );
+}
+
+#intro {
+  font-family: "Archivo Black", sans-serif;
+  background-color: #106af0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#introText {
+  position: absolute;
+  top: 50%;
+  left: 32%;
+  color: white;
+}
+/* აქედან */
+
+.words {
+  color: #106af0;
+  font-size: 0;
+  line-height: 1.5;
+}
+
+.betterClass span {
+  display: inline-block;
+  animation: intromove 3s infinite;
+}
+
+@keyframes move {
+  0% {
+    color: white;
+    opacity: 0;
+  }
+  50% {
+    text-shadow: 0 25px 50px rgba(0, 0, 0, 0.75);
+  }
+  100% {
+    color: orange;
+    transform: translate(-30%, 0);
+  }
+}
+
+@keyframes intromove {
+  0% {
+    transform: scaleX(0);
+    color: #0275d8;
+  }
+  50% {
+    text-shadow: 0 25px 50px rgba(0, 0, 0, 0.75);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+#everyD {
+  display: none;
+}
+.everyDay span {
+  animation: move 3s infinite;
+}
+
+/*everyday animation */
+.everyDay span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.everyDay span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.everyDay span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.everyDay span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.everyDay span:nth-child(6) {
+  animation-delay: 1s;
+}
+
+.everyDay span:nth-child(7) {
+  animation-delay: 1.2s;
+}
+
+.everyDay span:nth-child(8) {
+  animation-delay: 1.4s;
+}
+.everyDay span:nth-child(9) {
+  animation-delay: 1.6s;
+}
+.everyDay span:nth-child(10) {
+  animation-delay: 1.8s;
+}
+/* be better animation */
+.betterClass span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.betterClass span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.betterClass span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.betterClass span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.betterClass span:nth-child(6) {
+  animation-delay: 1s;
+}
+
+.betterClass span:nth-child(7) {
+  animation-delay: 1.2s;
+}
+
+.betterClass span:nth-child(8) {
+  animation-delay: 1.4s;
+}
+.betterClass span:nth-child(9) {
+  animation-delay: 1.6s;
+}
+.betterClass span:nth-child(10) {
+  animation-delay: 1.8s;
+}
+
+/*აქამდე */
+
+/* აქამდე */
+.roundImg {
+  border-radius: 50%;
+  height: 40px;
+  margin-left: 5px;
+  cursor: pointer;
+  border: 1px solid #6c757d;
+}
+.liC {
+  list-style: none;
+}
+.myTitle {
+  font-style: italic;
+  letter-spacing: 2px;
+  font-weight: bolder;
+  text-shadow: 1px 1px;
+}
+#headerNav {
+  overflow: hidden;
+}
+#main {
+  overflow: hidden;
+}
+
+#myWork {
+  overflow: hidden;
+  display: none;
+}
+a:hover {
+  text-decoration: underline;
+  transition: background-color 0.5s;
+}
+
+.card {
+  border-radius: 2%;
+}
+
+.displayN {
+  display: none !important;
+}
+.displayB {
+  display: block !important;
+}
+/*  ანიმაციები*/
+@keyframes flipPage {
+  0% {
+    left: 0%;
+    overflow: hidden;
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes flipPage1 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animeFlipPage {
+  animation: flipPage 0.7s forwards;
+}
+
+.animeFlipPage1 {
+  animation: flipPage1 0.7s forwards;
+}
+
+/* reverse flip*/
+@keyframes revflipPage {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes revflipPage1 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.revanimeFlipPage {
+  animation: revflipPage 0.7s forwards;
+}
+.revanimeFlipPage1 {
+  animation: revflipPage1 0.7s forwards;
+}
+
+/* სურათის ანიმაცია */
+.flip-card {
+  background-color: transparent;
+  height: 300px;
+  perspective: 1000px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5%;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  border-radius: 5%;
+  color: white;
+  transform: rotateY(180deg);
+} /*cards -ანიმაცია*/
+@keyframes cardleft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-500%);
+  }
+}
+
+@keyframes cardright {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(500%);
+  }
+}
+
+@keyframes leftFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeInLeft {
+  animation: leftFadeIn 2s forwards;
+}
+.fadeInRight {
+  animation: cardright 2s forwards;
+  animation-direction: reverse;
+}
+.cardAnim {
+  animation: cardleft 2s forwards;
+}
+.cardAnim1 {
+  animation: cardright 2s forwards;
+}
+
+/*side sacdeli */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  border-radius: 3%;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  letter-spacing: 2px;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-width: 450px) {
+  .smallFont {
+    font-size: 0.7rem !important;
+  }
+  .betterClass {
+    font-size: 0.9rem !important;
+  }
+  #gmailValue {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* mdoal-animation */
+
+@keyframes modal {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(50deg);
+  }
+}
+
+.modalanime {
+  animation: modal 1s forwards;
+}
