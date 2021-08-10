@@ -325,7 +325,7 @@ a:hover {
   z-index: 1;
   top: 0;
   right: 0;
-  background-color: #111;
+  background-color: #007bff;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -336,14 +336,15 @@ a:hover {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: white;
+  color: #28a745;
   display: block;
   transition: 0.3s;
   letter-spacing: 2px;
+  font-weight: bolder;
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: black;
 }
 
 .sidenav .closebtn {
@@ -352,23 +353,12 @@ a:hover {
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+  color: red;
 }
 
-@media screen and (max-width: 450px) {
-  .smallFont {
-    font-size: 0.7rem !important;
-  }
-  .betterClass {
-    font-size: 0.9rem !important;
-  }
-  #gmailValue {
-    font-size: 0.9rem !important;
-  }
-   body{
-    font-size: 0.7rem !important;
-  }
+.myNav {
+  border-radius: 30%;
 }
-
 /* mdoal-animation */
 
 @keyframes modal {
@@ -382,4 +372,134 @@ a:hover {
 
 .modalanime {
   animation: modal 1s forwards;
+}
+
+/* compiuter svg anime */
+#Html,
+#Css,
+#Js,
+#Svg,
+#bootstrap {
+  opacity: 0;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.Htmla {
+  animation: texting 0.5s forwards;
+}
+.Cssa {
+  animation: texting 0.5s forwards;
+  animation-delay: 0.5s;
+}
+.Jsa {
+  animation: texting 0.5s forwards;
+  animation-delay: 1s;
+}
+.Svga {
+  animation: texting 0.5s forwards;
+  animation-delay: 1.5s;
+}
+.bootstrapa {
+  animation: texting 0.5s forwards;
+  animation-delay: 2s;
+}
+@keyframes texting {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+#man-head {
+  animation: head 2s infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes head {
+  0% {
+    transform: rotateZ(0);
+  }
+  25% {
+    transform: rotateZ(2deg);
+  }
+  50% {
+    transform: rotateZ(0deg);
+  }
+  75% {
+    transform: rotateZ(-2deg);
+  }
+}
+
+#heand-right {
+  animation: heand 1s infinite ease-in-out;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes heand {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-3%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  75% {
+    transform: translateX(3%);
+  }
+}
+
+#compiuters {
+  animation: comp 5s infinite;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+
+@keyframes comp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 450px) {
+  .smallFont {
+    font-size: 0.7rem !important;
+  }
+  .betterClass {
+    font-size: 0.9rem !important;
+  }
+  #gmailValue {
+    font-size: 0.9rem !important;
+  }
+  body {
+    font-size: 0.7rem !important;
+  }
+  .imgH {
+    height: 100px;
+    width: 100px;
+  }
+  #headerNav {
+    height: 40px;
+  }
+  #sideIcon {
+    font-size: 30px !important;
+  }
+  .card-title {
+    font-size: 0.7rem !important;
+    height: 5px;
+  }
+  .smallBtn {
+    height: 25px;
+    font-size: 0.7rem !important;
+    letter-spacing: 1px;
+  }
 }
