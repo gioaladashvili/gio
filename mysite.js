@@ -125,15 +125,33 @@ navContcBtn.addEventListener("click", () => {
   closeNav();
 });
 
+//side bar-ის კაცის ანიმაცია //
+var htmlS = document.getElementById("Html");
+var cssS = document.getElementById("Css");
+var JsS = document.getElementById("Js");
+var svgS = document.getElementById("Svg");
+var bootstrapS = document.getElementById("bootstrap");
+
 //side bar-გახსნა//
 sideBtn.addEventListener("click", sideNavMenu);
 function sideNavMenu() {
-  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("mySidenav").style.width = "100%";
+  htmlS.classList.add("Htmla");
+  cssS.classList.add("Cssa");
+  JsS.classList.add("Jsa");
+  svgS.classList.add("Svga");
+  bootstrapS.classList.add("bootstrapa");
+  console.log("here");
 }
 
 //side bar-X-დახურვა//
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
+  htmlS.classList.remove("Htmla");
+  cssS.classList.remove("Cssa");
+  JsS.classList.remove("Jsa");
+  svgS.classList.remove("Svga");
+  bootstrapS.classList.remove("bootstrapa");
 }
 
 $("#myModal").on("shown.bs.modal", function () {
@@ -161,3 +179,11 @@ function beBetterEvery() {
   }
 }
 beBetterEvery();
+
+//page relaod//
+var reload = document.getElementById("reloadPage");
+reload.addEventListener("click", () => {
+  window.location.reload();
+});
+
+//canvas//
