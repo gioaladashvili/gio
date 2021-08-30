@@ -35,7 +35,7 @@ body {
 
 .betterClass span {
   display: inline-block;
-  animation: intromove 3s infinite;
+  animation: intromove 8s infinite;
 }
 
 @keyframes move {
@@ -55,7 +55,7 @@ body {
 @keyframes intromove {
   0% {
     transform: scaleX(0);
-    color: #0275d8;
+    color: orange;
   }
   50% {
     text-shadow: 0 25px 50px rgba(0, 0, 0, 0.75);
@@ -140,6 +140,30 @@ body {
 .betterClass span:nth-child(10) {
   animation-delay: 1.8s;
 }
+.betterClass span:nth-child(11) {
+  animation-delay: 2s;
+}
+.betterClass span:nth-child(12) {
+  animation-delay: 2.2s;
+}
+.betterClass span:nth-child(13) {
+  animation-delay: 2.4s;
+}
+.betterClass span:nth-child(14) {
+  animation-delay: 2.6s;
+}
+.betterClass span:nth-child(15) {
+  animation-delay: 2.8s;
+}
+.betterClass span:nth-child(16) {
+  animation-delay: 3s;
+}
+.betterClass span:nth-child(17) {
+  animation-delay: 3.2s;
+}
+.betterClass span:nth-child(18) {
+  animation-delay: 3.4s;
+}
 
 /*აქამდე */
 
@@ -179,7 +203,6 @@ a:hover {
 .card {
   border-radius: 2%;
 }
-
 .displayN {
   display: none !important;
 }
@@ -470,6 +493,8 @@ a:hover {
     opacity: 1;
   }
 }
+
+/* responcive */
 @media screen and (max-width: 450px) {
   .smallFont {
     font-size: 0.7rem !important;
@@ -501,5 +526,22 @@ a:hover {
     height: 25px;
     font-size: 0.7rem !important;
     letter-spacing: 1px;
+  }
+  #sideIcon {
+    font-size: 20px !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 0.9rem !important;
+  }
+  #gio {
+    font-size: 0.8rem !important;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  #gio {
+    font-size: 1rem !important;
   }
 }
