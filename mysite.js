@@ -20,9 +20,9 @@ function workFun() {
   setTimeout(() => {
     myWork.style.display = "block";
   }, 700);
-  $("#myWorkBtn").addClass("active border border-white text-info");
+  $("#myWorkBtn").addClass("active border border-white text-warning");
   $("#myWorkBtn").removeClass("text-white");
-  $("#homeBtn").removeClass("active border border-white text-info");
+  $("#homeBtn").removeClass("active border border-white text-warning");
   $("#homeBtn").addClass("text-white");
 }
 
@@ -40,10 +40,10 @@ function mainFun() {
   setTimeout(() => {
     myWork.style.display = "none";
   }, 700);
-  $("#myWorkBtn").removeClass("active border border-white text-info");
+  $("#myWorkBtn").removeClass("active border border-white text-warning");
   $("#myWorkBtn").addClass("text-white");
   $("#homeBtn").removeClass("text-white");
-  $("#homeBtn").addClass("active border border-white text-info");
+  $("#homeBtn").addClass("active border border-white text-warning");
 }
 
 //side Nav responcive//
@@ -53,12 +53,16 @@ myFunction(x);
 function myFunction(x) {
   if (x.matches) {
     // If media query matches
-
     $("#sideIcon").addClass("d-none");
-    $("#headNavCon").removeClass("d-none");
+    $("#headerNav").removeClass("d-none");
+    $("#galad").addClass("d-none");
+    $("#headerNav").removeClass("d-none");
+    $("#background-galad").removeClass("text-white bg-primary");
   } else {
     $("#sideIcon").removeClass("d-none");
-    $("#headNavCon").addClass("d-none");
+    $("#galad").removeClass("d-none");
+    $("#headerNav").addClass("d-none");
+    $("#background-galad").addClass("text-white bg-primary");
   }
 }
 
@@ -134,19 +138,19 @@ var bootstrapS = document.getElementById("bootstrap");
 
 //side bar-გახსნა//
 sideBtn.addEventListener("click", sideNavMenu);
+var mySide = document.getElementById("mySidenav");
 function sideNavMenu() {
-  document.getElementById("mySidenav").style.width = "100%";
+  mySide.style.width = "100%";
   htmlS.classList.add("Htmla");
   cssS.classList.add("Cssa");
   JsS.classList.add("Jsa");
   svgS.classList.add("Svga");
   bootstrapS.classList.add("bootstrapa");
-  console.log("here");
 }
 
 //side bar-X-დახურვა//
 function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
+  mySide.style.width = "0";
   htmlS.classList.remove("Htmla");
   cssS.classList.remove("Cssa");
   JsS.classList.remove("Jsa");
@@ -178,12 +182,4 @@ function beBetterEvery() {
     }
   }
 }
-beBetterEvery();
-
-//page relaod//
-var reload = document.getElementById("reloadPage");
-reload.addEventListener("click", () => {
-  window.location.reload();
-});
-
-//canvas//
+//beBetterEvery();
